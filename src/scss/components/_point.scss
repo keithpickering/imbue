@@ -32,7 +32,7 @@
 		&:after {
 			content: "";
 			position: absolute;
-			bottom: -$spacing;
+			bottom: -$spacing-xl/2;
 			left: 50%;
 			width: 33.33%;
 			margin-left: -16.665%;

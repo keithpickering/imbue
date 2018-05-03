@@ -1,10 +1,33 @@
 /**
  * HERO
- * Just some extra styles for Bulma's hero element, allowing it to accept image and video backgrounds.
+ * Extra styles extending the functionality of Bulma's hero element
  */
 
 
 .hero {
+	&.is-landing {
+		text-align: center;
+
+		.container {
+			@include desktop {
+				max-width: 1000px;
+			}
+		}
+
+		.title {
+			font-size: $size-1;
+
+			@include tablet {
+				font-size: 4rem;
+			}
+
+			@include desktop {
+				margin-bottom: $spacing-lg;
+				font-size: 6rem;
+			}
+		}
+	}
+
 	&.has-background {
 		position: relative;
 		overflow: hidden;

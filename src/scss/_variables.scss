@@ -3,7 +3,22 @@
  *
  * Unless you're doing some really serious customization, you can probably
  * get everything done by changing these.
+ *
+ * Any default Bulma variables can be easily overridden here. You can find a
+ * list of variables at https://bulma.io/documentation/overview/variables/
  */
+
+
+/**
+ * COLORS
+ */
+$primary: $cyan;
+
+
+/**
+ * FONTS
+ */
+$family-sans-serif: "IBM Plex Sans", sans-serif;
 
 
 /**
@@ -14,6 +29,12 @@ $spacing-lg: 2rem;
 $spacing: 1.5rem;
 $spacing-sm: 1rem;
 $spacing-xs: 0.5rem;
+
+
+/**
+ * GENERIC VARIABLES
+ */
+$body-size: 18px;
 
 
 /**

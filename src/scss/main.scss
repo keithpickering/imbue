@@ -1,4 +1,11 @@
-// Import Bulma
+// Import Bulma initial variables
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
+// Import Imbue-specific variables + Bulma overrides
+@import "variables";
+
+// Import the rest of Bulma
 @import "../../node_modules/bulma/bulma";
 
 // Import Font Awesome
@@ -7,9 +14,6 @@ $fa-font-path: "../fonts/font-awesome";
 @import "font-awesome/fa-regular";
 @import "font-awesome/fa-brands";
 @import "font-awesome/fontawesome";
-
-// Import Imbue-specific variables
-@import "variables";
 
 // Import custom components
 @import "components/hero";
