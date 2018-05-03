@@ -6440,7 +6440,7 @@ label.panel-block {
       padding: 18rem 1.5rem; } }
 
 .footer {
-  background-color: #fafafa;
+  background-color: #363636;
   padding: 3rem 1.5rem 6rem; }
 
 /*!
@@ -9520,3 +9520,11 @@ h1.title {
       background-color: #b5b5b5; }
   .point-desc {
     text-align: justify; }
+
+/**
+ * FOOTER
+ *
+ * Additional styles for Bulma's footer element
+ */
+.footer {
+  color: #b5b5b5; }
