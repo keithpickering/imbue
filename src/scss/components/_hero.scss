@@ -1,0 +1,51 @@
+/**
+ * HERO
+ * Just some extra styles for Bulma's hero element, allowing it to accept image and video backgrounds.
+ */
+
+
+.hero {
+	&.has-background {
+		position: relative;
+		overflow: hidden;
+		background-color: transparent;
+	}
+
+	&-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 0;
+
+		&:after {
+			// Color overlay if a color class is added to the hero
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0.5;
+			z-index: 2;
+
+			.is-primary & {
+				background-color: $primary;
+			}
+		}
+
+		> img,
+		> video {
+			width: 100%;
+		}
+	}
+
+	&-body {
+		position: relative;
+		z-index: 1;
+
+		.has-background & {
+			text-shadow: rgba($black, 0.5) 0 2px 15px;
+		}
+	}
+}

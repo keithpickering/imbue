@@ -9401,6 +9401,42 @@ readers do not read off random characters that represent icons */
  * POINT COMPONENT
  */
 /**
+ * HERO
+ * Just some extra styles for Bulma's hero element, allowing it to accept image and video backgrounds.
+ */
+.hero.has-background {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent; }
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0; }
+  .hero-background:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 2; }
+    .is-primary .hero-background:after {
+      background-color: #00d1b2; }
+  .hero-background > img,
+  .hero-background > video {
+    width: 100%; }
+
+.hero-body {
+  position: relative;
+  z-index: 1; }
+  .has-background .hero-body {
+    text-shadow: rgba(10, 10, 10, 0.5) 0 2px 15px; }
+
+/**
  * POINT
  *
  * For when you need to make a point. Contains an icon, a title, and text content.
