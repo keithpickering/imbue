@@ -9413,6 +9413,27 @@ readers do not read off random characters that represent icons */
   width: auto; }
 
 /**
+ * TITLE
+ *
+ * Overrides for Bulma's title and subtitle elements
+ */
+.title {
+  font-family: "Work Sans", serif; }
+
+h1.title {
+  text-transform: uppercase; }
+  h1.title:not(:last-child) {
+    margin-bottom: 2.5rem; }
+
+/**
+ * CONTAINER
+ *
+ * Extra options for Bulma's container element
+ */
+.container.is-skinny {
+  max-width: 640px; }
+
+/**
  * HERO
  * Extra styles extending the functionality of Bulma's hero element
  */
@@ -9426,10 +9447,6 @@ readers do not read off random characters that represent icons */
     @media screen and (min-width: 769px), print {
       .hero.is-landing .title {
         font-size: 4rem; } }
-    @media screen and (min-width: 1088px) {
-      .hero.is-landing .title {
-        margin-bottom: 2rem;
-        font-size: 6rem; } }
 
 .hero.has-background {
   position: relative;
@@ -9441,6 +9458,7 @@ readers do not read off random characters that represent icons */
   top: 0;
   left: 0;
   right: 0;
+  height: 100%;
   z-index: 0; }
   .hero-background:after {
     content: "";
@@ -9455,7 +9473,9 @@ readers do not read off random characters that represent icons */
       background-color: #209cee; }
   .hero-background > img,
   .hero-background > video {
-    width: 100%; }
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .hero-body {
   position: relative;
