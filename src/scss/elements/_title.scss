@@ -1,0 +1,18 @@
+/**
+ * TITLE
+ *
+ * Overrides for Bulma's title and subtitle elements
+ */
+
+
+.title {
+	font-family: $family-title;
+}
+
+h1.title {
+	text-transform: uppercase;
+
+	&:not(:last-child) {
+		margin-bottom: $spacing-xl;
+	}
+}

@@ -1,0 +1,12 @@
+/**
+ * CONTAINER
+ *
+ * Extra options for Bulma's container element
+ */
+
+
+.container {
+	&.is-skinny {
+		max-width: 640px;
+	}
+}

@@ -20,11 +20,6 @@
 			@include tablet {
 				font-size: 4rem;
 			}
-
-			@include desktop {
-				margin-bottom: $spacing-lg;
-				font-size: 6rem;
-			}
 		}
 	}
 
@@ -39,6 +34,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
+		height: 100%;
 		z-index: 0;
 
 		&:after {
@@ -59,7 +55,9 @@
 
 		> img,
 		> video {
+			height: 100%;
 			width: 100%;
+			object-fit: cover;
 		}
 	}
 

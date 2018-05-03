@@ -15,6 +15,10 @@ $fa-font-path: "../fonts/font-awesome";
 @import "font-awesome/fa-brands";
 @import "font-awesome/fontawesome";
 
+// Import element styles
+@import "elements/title";
+
 // Import custom components
+@import "components/container";
 @import "components/hero";
 @import "components/point";
