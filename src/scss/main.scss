@@ -1,2 +1,15 @@
 // Import Bulma
 @import "../../node_modules/bulma/bulma";
+
+// Import Font Awesome
+$fa-font-path: "../fonts/font-awesome";
+@import "font-awesome/fa-solid";
+@import "font-awesome/fa-regular";
+@import "font-awesome/fa-brands";
+@import "font-awesome/fontawesome";
+
+// Import Imbue-specific variables
+@import "variables";
+
+// Import custom components
+@import "components/point";

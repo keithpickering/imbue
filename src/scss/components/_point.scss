@@ -1,0 +1,47 @@
+/**
+ * POINT
+ *
+ * For when you need to make a point. Contains an icon, a title, and text content.
+ * Looks best when you have multiple points in a row using the grid/column system.
+ */
+
+.point {
+	padding-left: $spacing;
+	padding-right: $spacing;
+
+	&-icon {
+		display: flex;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: $spacing;
+		width: $point-icon-size;
+		height: $point-icon-size;
+		font-size: $point-icon-size/2.5;
+		border-radius: 50%;
+		color: $point-icon-fg;
+		background-color: $point-icon-bg;
+	}
+
+	.title {
+		position: relative;
+		margin-bottom: $spacing-xl;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: $size-5;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -$spacing;
+			left: 50%;
+			width: 33.33%;
+			margin-left: -16.665%;
+			height: 1px;
+			background-color: $grey-light;
+		}
+	}
+
+	&-desc {
+		text-align: justify;
+	}
+}
