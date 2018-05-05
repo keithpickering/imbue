@@ -1,0 +1,83 @@
+/**
+ * TEAM
+ *
+ * Show a clickable list of team members or other humans. Or anything else, I guess.
+ */
+
+
+.team {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	&-member {
+		width: 100%;
+		max-width: 240px;
+
+		&:not(:last-child) {
+			margin-bottom: $spacing;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			.team-member-photo {
+				border-radius: $radius-large;
+			}
+
+			.team-member-body {
+				opacity: 1;
+			}
+		}
+
+		@include tablet {
+			width: 50%;
+		}
+
+		@include desktop {
+			width: 25%;
+		}
+
+		&-photo {
+			position: relative;
+			overflow: hidden;
+			margin-bottom: $spacing;
+			border-radius: 50%;
+			box-shadow: inset $spacing-sm $spacing-sm $spacing rgba($black, 0.75);
+			transition: border-radius 250ms;
+
+			> img {
+				display: block;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				z-index: -1;
+			}
+		}
+
+		&-name {
+			margin-bottom: $spacing-xs;
+			text-align: center;
+			font-size: $size-5;
+		}
+
+		&-title {
+			text-align: center;
+			font-size: $size-6;
+		}
+
+		&-body {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: $spacing;
+			background-color: rgba($grey-dark, 0.5);
+			color: $white;
+			opacity: 0;
+			transition: opacity 250ms;
+		}
+	}
+}

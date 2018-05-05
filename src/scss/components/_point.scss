@@ -6,8 +6,27 @@
  */
 
 .point {
+	display: flex;
+	flex-direction: column;
 	padding-left: $spacing;
 	padding-right: $spacing;
+
+	&:not(:last-child) {
+		margin-bottom: $spacing;
+	}
+
+	&.is-horizontal {
+		flex-direction: row;
+
+		.title {
+			margin-bottom: $spacing-sm;
+			text-align: left;
+
+			&:after {
+				display: none;
+			}
+		}
+	}
 
 	&-icon {
 		display: flex;
@@ -20,13 +39,25 @@
 		border-radius: 50%;
 		color: $point-icon-fg;
 		background-color: $point-icon-bg;
+
+		.is-horizontal & {
+			flex-shrink: 0;
+			width: $point-icon-size/2;
+			height: $point-icon-size/2;
+			font-size: $point-icon-size/4;
+		}
+	}
+
+	&-body {
+		.is-horizontal & {
+			padding-left: $spacing;
+		}
 	}
 
 	.title {
 		position: relative;
 		margin-bottom: $spacing-xl;
 		text-align: center;
-		text-transform: uppercase;
 		font-size: $size-5;
 
 		&:after {
@@ -42,6 +73,10 @@
 	}
 
 	&-desc {
-		text-align: justify;
+		padding-left: $spacing;
+
+		.is-horizontal & {
+			padding-left: 0;
+		}
 	}
 }

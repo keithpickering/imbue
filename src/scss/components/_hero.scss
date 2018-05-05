@@ -6,8 +6,6 @@
 
 .hero {
 	&.is-landing {
-		text-align: center;
-
 		.container {
 			@include desktop {
 				max-width: 1000px;
