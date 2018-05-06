@@ -1,7 +1,10 @@
 /**
  * TEAM
  *
- * Show a clickable list of team members or other humans. Or anything else, I guess.
+ * Show a clickable list of team members or other humans.
+ *
+ * Optionally include social links that will overlay the person's
+ * photo on hover. 4 social links or fewer looks best.
  */
 
 
@@ -19,13 +22,7 @@
 		}
 
 		&:hover {
-			cursor: pointer;
-
-			.team-member-photo {
-				border-radius: $radius-large;
-			}
-
-			.team-member-body {
+			.social {
 				opacity: 1;
 			}
 		}
@@ -44,7 +41,6 @@
 			margin-bottom: $spacing;
 			border-radius: 50%;
 			box-shadow: inset $spacing-sm $spacing-sm $spacing rgba($black, 0.75);
-			transition: border-radius 250ms;
 
 			> img {
 				display: block;
@@ -67,7 +63,7 @@
 			font-size: $size-6;
 		}
 
-		&-body {
+		.social {
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -77,7 +73,7 @@
 			background-color: rgba($grey-dark, 0.5);
 			color: $white;
 			opacity: 0;
-			transition: opacity 250ms;
+			transition: opacity $speed;
 		}
 	}
 }

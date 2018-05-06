@@ -1,0 +1,13 @@
+/**
+ * ACCESSIBLE HIDING CLASS
+ *
+ * Use to hide content visually while keeping it available to screen readers
+ */
+
+
+.accessibility {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}

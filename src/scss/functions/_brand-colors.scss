@@ -1,0 +1,16 @@
+/**
+ * BRAND COLORS
+ *
+ * Generate Bulma-compliant classes for social brand colors
+ */
+
+
+@each $color in $brand-colors {
+	.is-#{nth($color, 1)} {
+		background-color: #{nth($color, 2)};
+	}
+
+	.has-text-#{nth($color, 1)} {
+		color: #{nth($color, 2)};
+	}
+}

@@ -15,12 +15,20 @@ $fa-font-path: "../fonts/font-awesome";
 @import "font-awesome/fa-brands";
 @import "font-awesome/fontawesome";
 
+// Import Imbue functions and mixins
+@import "functions/brand-colors";
+@import "functions/box-shadow";
+
+// Import utilities
+@import "utilities/accessibility";
+
 // Import element styles
 @import "elements/title";
 
-// Import custom components
+// Import custom components - comment out any you don't need
 @import "components/container";
 @import "components/hero";
 @import "components/point";
 @import "components/team";
+@import "components/social";
 @import "components/footer";

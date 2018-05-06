@@ -39,6 +39,7 @@
 		border-radius: 50%;
 		color: $point-icon-fg;
 		background-color: $point-icon-bg;
+		@include box-shadow(1);
 
 		.is-horizontal & {
 			flex-shrink: 0;

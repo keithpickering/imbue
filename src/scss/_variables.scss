@@ -17,6 +17,32 @@ $footer-background-color: $grey-darker;
 
 
 /**
+ * BRAND COLORS
+ */
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$youtube: #ff0000;
+$instagram: #c32aa3;
+$pinterest: #bd081c;
+$linkedin: #007bb5;
+$googleplus: #db4437;
+$google: #4285f4;
+$tumblr: #35465d;
+$soundcloud: #ff5500;
+
+$brand-colors: facebook $facebook,
+			   twitter $twitter,
+			   youtube $youtube,
+			   instagram $instagram,
+			   pinterest $pinterest,
+			   linkedin $linkedin,
+			   googleplus $googleplus,
+			   google $google,
+			   tumblr $tumblr,
+			   soundcloud $soundcloud;
+
+
+/**
  * FONTS
  */
 $family-sans-serif: "IBM Plex Sans", sans-serif;

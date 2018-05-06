@@ -1,0 +1,39 @@
+/**
+ * SOCIAL
+ *
+ * Simple list of social network links
+ * The most common social networks have brand colors included here
+ */
+
+
+.social {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+	&-link {
+		flex-grow: 0;
+		flex-shrink: 0;
+		margin: $spacing-xs;
+		width: 3rem;
+		height: 3rem;
+		line-height: 3rem;
+		border-radius: $radius-rounded;
+		text-align: center;
+		color: $white;
+		transition: box-shadow $speed;
+		@include box-shadow(1);
+
+		&:not([class*="is-"]) {
+			background-color: $grey-dark;
+		}
+
+		&:hover,
+		&:focus {
+			color: $white;
+			@include box-shadow(2);
+		}
+	}
+}
