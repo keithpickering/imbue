@@ -9524,6 +9524,25 @@ h1.title {
   max-width: 640px; }
 
 /**
+ * PAGE HEAD
+ *
+ * The main navbar containing your logo and menu
+ */
+.page-head {
+  box-shadow:  0 1px 3px rgba(0, 0, 0, 0.12),  0 1px 2px rgba(0, 0, 0, 0.24); }
+  .page-head .navbar-item {
+    text-transform: uppercase;
+    font-size: 0.75rem; }
+    .page-head .navbar-item:hover, .page-head .navbar-item:focus {
+      color: #209cee !important; }
+  .page-head.is-dark .navbar-start .navbar-item,
+  .page-head.is-dark .navbar-end .navbar-item {
+    color: #b5b5b5; }
+
+.site-logo > img {
+  height: 1.25rem; }
+
+/**
  * HERO
  * Extra styles extending the functionality of Bulma's hero element
  */
@@ -9627,7 +9646,7 @@ h1.title {
       width: 25%;
       margin-left: -12.5%;
       height: 1px;
-      background-color: #b5b5b5;
+      background-color: #cfcfcf;
       transition: transform 200ms ease-out; }
   .point:hover .title:after {
     transform: scaleX(1.5); }
@@ -9723,11 +9742,21 @@ h1.title {
     .social-link:hover, .social-link:focus {
       color: white;
       box-shadow:  0 3px 6px rgba(0, 0, 0, 0.16),  0 3px 6px rgba(0, 0, 0, 0.23); }
+  .social.is-small .social-link {
+    width: 2rem;
+    height: auto;
+    line-height: 0;
+    margin: 0;
+    background-color: transparent;
+    color: #9c9c9c;
+    box-shadow: none; }
+    .social.is-small .social-link:hover, .social.is-small .social-link:focus {
+      color: #209cee; }
 
 /**
- * FOOTER
+ * PAGE FOOT
  *
- * Additional styles for Bulma's footer element
+ * The main footer on each page
  */
-.footer {
+.page-foot {
   color: #b5b5b5; }
