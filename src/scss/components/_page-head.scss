@@ -1,0 +1,34 @@
+/**
+ * PAGE HEAD
+ *
+ * The main navbar containing your logo and menu
+ */
+
+
+.page-head {
+	//background-color: rgba($white, 0.95);
+	@include box-shadow(1);
+
+	.navbar-item {
+		text-transform: uppercase;
+		font-size: $size-7;
+
+		&:hover,
+		&:focus {
+			color: $primary !important;
+		}
+	}
+
+	&.is-dark .navbar-start,
+	&.is-dark .navbar-end {
+		.navbar-item {
+			color: $grey-light;
+		}
+	}
+}
+
+.site-logo {
+	> img {
+		height: 1.25rem;
+	}
+}

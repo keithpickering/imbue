@@ -36,4 +36,21 @@
 			@include box-shadow(2);
 		}
 	}
+
+	&.is-small {
+		.social-link {
+			width: 2rem;
+			height: auto;
+			line-height: 0;
+			margin: 0;
+			background-color: transparent;
+			color: darken($grey-light, 10%);
+			box-shadow: none;
+
+			&:hover,
+			&:focus {
+				color: $primary;
+			}
+		}
+	}
 }
