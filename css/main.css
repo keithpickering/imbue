@@ -4436,7 +4436,7 @@ body.has-navbar-fixed-bottom {
     left: calc(50% - 8px);
     position: absolute;
     transform-origin: center;
-    transition-duration: 86ms;
+    transition-duration: 200ms;
     transition-property: background-color, opacity, transform;
     transition-timing-function: ease-out;
     width: 16px; }
@@ -4664,7 +4664,7 @@ a.navbar-item,
       pointer-events: none;
       top: calc(100% + (-4px));
       transform: translateY(-5px);
-      transition-duration: 86ms;
+      transition-duration: 200ms;
       transition-property: opacity, transform; }
     .navbar-dropdown.is-right {
       left: auto;
@@ -9583,6 +9583,8 @@ h1.title {
   flex-direction: column;
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
+  .point:hover .point-icon {
+    box-shadow:  0 3px 6px rgba(0, 0, 0, 0.16),  0 3px 6px rgba(0, 0, 0, 0.23); }
   .point:not(:last-child) {
     margin-bottom: 1.5rem; }
   .point.is-horizontal {
@@ -9603,7 +9605,8 @@ h1.title {
     border-radius: 50%;
     color: #209cee;
     background-color: whitesmoke;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    transition: box-shadow 200ms ease-out;
+    box-shadow:  0 1px 3px rgba(0, 0, 0, 0.12),  0 1px 2px rgba(0, 0, 0, 0.24); }
     .is-horizontal .point-icon {
       flex-shrink: 0;
       width: 3rem;
@@ -9621,10 +9624,13 @@ h1.title {
       position: absolute;
       bottom: -1.25rem;
       left: 50%;
-      width: 33.33%;
-      margin-left: -16.665%;
+      width: 25%;
+      margin-left: -12.5%;
       height: 1px;
-      background-color: #b5b5b5; }
+      background-color: #b5b5b5;
+      transition: transform 200ms ease-out; }
+  .point:hover .title:after {
+    transform: scaleX(1.5); }
   .point-desc {
     padding-left: 1.5rem; }
     .is-horizontal .point-desc {
@@ -9660,13 +9666,14 @@ h1.title {
       overflow: hidden;
       margin-bottom: 1.5rem;
       border-radius: 50%;
-      box-shadow: inset 1rem 1rem 1.5rem rgba(10, 10, 10, 0.75); }
+      box-shadow: inset 0 14px 28px rgba(0, 0, 0, 0.25), inset 0 10px 10px rgba(0, 0, 0, 0.22); }
       .team-member-photo > img {
         display: block;
         position: relative;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
         z-index: -1; }
     .team-member-name {
       margin-bottom: 0.5rem;
@@ -9685,7 +9692,7 @@ h1.title {
       background-color: rgba(74, 74, 74, 0.5);
       color: white;
       opacity: 0;
-      transition: opacity 86ms; }
+      transition: opacity 200ms; }
 
 /**
  * SOCIAL
@@ -9709,13 +9716,13 @@ h1.title {
     border-radius: 290486px;
     text-align: center;
     color: white;
-    transition: box-shadow 86ms;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    transition: box-shadow 200ms ease-out;
+    box-shadow:  0 1px 3px rgba(0, 0, 0, 0.12),  0 1px 2px rgba(0, 0, 0, 0.24); }
     .social-link:not([class*="is-"]) {
       background-color: #4a4a4a; }
     .social-link:hover, .social-link:focus {
       color: white;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+      box-shadow:  0 3px 6px rgba(0, 0, 0, 0.16),  0 3px 6px rgba(0, 0, 0, 0.23); }
 
 /**
  * FOOTER
