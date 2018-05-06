@@ -39,18 +39,10 @@
 
 	&.is-small {
 		.social-link {
-			width: 2rem;
-			height: auto;
-			line-height: 0;
-			margin: 0;
-			background-color: transparent;
-			color: darken($grey-light, 10%);
+			width: 1.5rem;
+			height: 1.5rem;
+			line-height: 1.5rem;
 			box-shadow: none;
-
-			&:hover,
-			&:focus {
-				color: $primary;
-			}
 		}
 	}
 }
