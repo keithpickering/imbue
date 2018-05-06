@@ -23,7 +23,7 @@
 		border-radius: $radius-rounded;
 		text-align: center;
 		color: $white;
-		transition: box-shadow $speed;
+		transition: box-shadow $speed $easing;
 		@include box-shadow(1);
 
 		&:not([class*="is-"]) {

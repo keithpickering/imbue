@@ -40,7 +40,7 @@
 			overflow: hidden;
 			margin-bottom: $spacing;
 			border-radius: 50%;
-			box-shadow: inset $spacing-sm $spacing-sm $spacing rgba($black, 0.75);
+			@include box-shadow(4, "inset");
 
 			> img {
 				display: block;
@@ -48,6 +48,7 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				object-position: center;
 				z-index: -1;
 			}
 		}
