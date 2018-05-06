@@ -11,6 +11,9 @@
  * COLORS
  */
 /**
+ * BRAND COLORS
+ */
+/**
  * FONTS
  */
 /**
@@ -9413,6 +9416,93 @@ readers do not read off random characters that represent icons */
   width: auto; }
 
 /**
+ * BRAND COLORS
+ *
+ * Generate Bulma-compliant classes for social brand colors
+ */
+.is-facebook {
+  background-color: #3b5998; }
+
+.has-text-facebook {
+  color: #3b5998; }
+
+.is-twitter {
+  background-color: #1da1f2; }
+
+.has-text-twitter {
+  color: #1da1f2; }
+
+.is-youtube {
+  background-color: #ff0000; }
+
+.has-text-youtube {
+  color: #ff0000; }
+
+.is-instagram {
+  background-color: #c32aa3; }
+
+.has-text-instagram {
+  color: #c32aa3; }
+
+.is-pinterest {
+  background-color: #bd081c; }
+
+.has-text-pinterest {
+  color: #bd081c; }
+
+.is-linkedin {
+  background-color: #007bb5; }
+
+.has-text-linkedin {
+  color: #007bb5; }
+
+.is-googleplus {
+  background-color: #db4437; }
+
+.has-text-googleplus {
+  color: #db4437; }
+
+.is-google {
+  background-color: #4285f4; }
+
+.has-text-google {
+  color: #4285f4; }
+
+.is-tumblr {
+  background-color: #35465d; }
+
+.has-text-tumblr {
+  color: #35465d; }
+
+.is-soundcloud {
+  background-color: #ff5500; }
+
+.has-text-soundcloud {
+  color: #ff5500; }
+
+/**
+ * A mixin which helps you to add depth to elements according to the Google Material Design spec:
+ * http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality
+ *
+ * Please note that the values given in the specification cannot be used as is. To create the same visual experience
+ * the blur parameter has to be doubled.
+ *
+ * Adapted from a LESS version at https://medium.com/@Florian/freebie-google-material-design-shadow-helper-2a0501295a2d
+ *
+ * Original Author: Florian Kutschera (@gefangenimnetz), Conceptboard GmbH (@conceptboardapp)
+ */
+/**
+ * ACCESSIBLE HIDING CLASS
+ *
+ * Use to hide content visually while keeping it available to screen readers
+ */
+.accessibility {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+/**
  * TITLE
  *
  * Overrides for Bulma's title and subtitle elements
@@ -9512,7 +9602,8 @@ h1.title {
     font-size: 2.4rem;
     border-radius: 50%;
     color: #209cee;
-    background-color: whitesmoke; }
+    background-color: whitesmoke;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
     .is-horizontal .point-icon {
       flex-shrink: 0;
       width: 3rem;
@@ -9542,7 +9633,10 @@ h1.title {
 /**
  * TEAM
  *
- * Show a clickable list of team members or other humans. Or anything else, I guess.
+ * Show a clickable list of team members or other humans.
+ *
+ * Optionally include social links that will overlay the person's
+ * photo on hover. 4 social links or fewer looks best.
  */
 .team {
   display: flex;
@@ -9553,12 +9647,8 @@ h1.title {
     max-width: 240px; }
     .team-member:not(:last-child) {
       margin-bottom: 1.5rem; }
-    .team-member:hover {
-      cursor: pointer; }
-      .team-member:hover .team-member-photo {
-        border-radius: 6px; }
-      .team-member:hover .team-member-body {
-        opacity: 1; }
+    .team-member:hover .social {
+      opacity: 1; }
     @media screen and (min-width: 769px), print {
       .team-member {
         width: 50%; } }
@@ -9570,8 +9660,7 @@ h1.title {
       overflow: hidden;
       margin-bottom: 1.5rem;
       border-radius: 50%;
-      box-shadow: inset 1rem 1rem 1.5rem rgba(10, 10, 10, 0.75);
-      transition: border-radius 250ms; }
+      box-shadow: inset 1rem 1rem 1.5rem rgba(10, 10, 10, 0.75); }
       .team-member-photo > img {
         display: block;
         position: relative;
@@ -9586,7 +9675,7 @@ h1.title {
     .team-member-title {
       text-align: center;
       font-size: 1rem; }
-    .team-member-body {
+    .team-member .social {
       position: absolute;
       top: 0;
       right: 0;
@@ -9596,7 +9685,37 @@ h1.title {
       background-color: rgba(74, 74, 74, 0.5);
       color: white;
       opacity: 0;
-      transition: opacity 250ms; }
+      transition: opacity 86ms; }
+
+/**
+ * SOCIAL
+ *
+ * Simple list of social network links
+ * The most common social networks have brand colors included here
+ */
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+  .social-link {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 290486px;
+    text-align: center;
+    color: white;
+    transition: box-shadow 86ms;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    .social-link:not([class*="is-"]) {
+      background-color: #4a4a4a; }
+    .social-link:hover, .social-link:focus {
+      color: white;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 /**
  * FOOTER
