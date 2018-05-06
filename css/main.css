@@ -9743,15 +9743,10 @@ h1.title {
       color: white;
       box-shadow:  0 3px 6px rgba(0, 0, 0, 0.16),  0 3px 6px rgba(0, 0, 0, 0.23); }
   .social.is-small .social-link {
-    width: 2rem;
-    height: auto;
-    line-height: 0;
-    margin: 0;
-    background-color: transparent;
-    color: #9c9c9c;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
     box-shadow: none; }
-    .social.is-small .social-link:hover, .social.is-small .social-link:focus {
-      color: #209cee; }
 
 /**
  * PAGE FOOT
