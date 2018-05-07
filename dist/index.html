@@ -75,7 +75,7 @@
       <div class="container">
         <div class="columns is-vcentered is-6 is-variable">
           <div class="column">
-            <img src="images/demo/pc.png">
+            <img src="images/demo/responsive.png">
           </div>
 
           <div class="column has-text-left">
@@ -119,7 +119,7 @@
                 <h3 class="title">Vanilla JS</h3>
 
                 <p class="point-desc">
-                  Imbue doesn&rsquo;t depend on any fancy-schmancy JavaScript libraries. But if you want to include jQuery or React, I won&rsquo;t tell anyone.
+                  Imbue doesn&rsquo;t depend on any fancy-schmancy JavaScript libraries. But if you want to include jQuery, I won&rsquo;t tell anyone.
                 </p>
               </div>
             </div>
@@ -134,7 +134,7 @@
                 <h3 class="title">Skip the Bloat</h3>
 
                 <p class="point-desc">
-                  We&rsquo;re grownups, right? We don&rsquo;t need a lucrative page builder, or a million Google Fonts preloaded. We can handle that stuff by ourselves.
+                  We&rsquo;re grownups, right? We don&rsquo;t need a lucrative page builder or a million Google Fonts preloaded. We just want to build a site.
                 </p>
               </div>
             </div>
@@ -260,45 +260,65 @@
   </section>
 
   <section class="hero is-light">
-    <div class="container">
-      <div class="hero-body">
-        <div class="accordions">
+    <div class="hero-body">
+      <div class="container">
+        <div class="accordions is-first-expanded">
           <article class="accordion">
             <header class="accordion-head">
-              <span class="icon has-text-primary">
+              <span class="icon is-large has-text-primary">
                 <i class="fas fa-chevron-right"></i>
               </span>
-              Accordion header
+              <span>What is Imbue?</span>
             </header>
-            <div class="accordion-body content">
-              <p>This is accordion text.</p>
-              <p>This is accordion text.</p>
+            <div class="accordion-body">
+              <div class="content">
+                <p>Imbue is a modern, responsive website theme built with HTML5, SASS, and Vanilla JavaScript. It can be used statically, or integrated with a CMS or site generator of your choice.</p>
+                <p>The theme is currently very early in development, but if you find it useful, go ahead and use it.</p>
+              </div>
             </div>
           </article>
 
           <article class="accordion">
             <header class="accordion-head">
-              <span class="icon has-text-primary">
+              <span class="icon is-large has-text-primary">
                 <i class="fas fa-chevron-right"></i>
               </span>
-              Accordion header
+              <span>What do I need to get started?</span>
             </header>
-            <div class="accordion-body content">
-              <p>This is accordion text.</p>
-              <p>This is accordion text.</p>
+            <div class="accordion-body">
+              <div class="content">
+                <p>Imbue doesn&rsquo;t have any dependencies, apart from a browser and a basic understanding of HTML. All you need to do is copy the contents of the <code>dist</code> folder, then you can use the included page templates as a starting point for building your site.</p>
+                <p>If you want to customize the SASS or JavaScript to build a custom version of the theme, you&rsquo;ll have to run <code>npm install</code> to get the required Node modules. Then you can run <code>grunt watch</code> to start watching for SASS and JS changes.</p&rsquo;
+              </div>
             </div>
           </article>
 
           <article class="accordion">
             <header class="accordion-head">
-              <span class="icon has-text-primary">
+              <span class="icon is-large has-text-primary">
                 <i class="fas fa-chevron-right"></i>
               </span>
-              Accordion header
+              <span>Why no jQuery, React, Vue, etc?</span>
             </header>
-            <div class="accordion-body content">
-              <p>This is accordion text.</p>
-              <p>This is accordion text.</p>
+            <div class="accordion-body">
+              <div class="content">
+                <p>The philosophy behind Imbue is to provide developers of all kinds with a jumping-off point for building a site on any platform they like. If I were to rely on a JavaScript library, the theme would no longer be as versatile and the purpose would be lost.</p>
+                <p>Because Imbue only uses Vanilla JS (and a small amount at that), you won&rsquo;t have any trouble including any of the libraries mentioned above. You can use whichever one you like, or none at all. It&rsquo;s up to you!</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion">
+            <header class="accordion-head">
+              <span class="icon is-large has-text-primary">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+              <span>What&rsquo;s the browser support?</span>
+            </header>
+            <div class="accordion-body">
+              <div class="content">
+                <p>Imbue should work like a dream in any modern browser. It uses some ES6 features without a transpiler, so IE could potentially have some issues. But I think generally the attitude on legacy support has shifted from <em>&ldquo;make sure our sites work in ancient browsers&rdquo;</em> to a much more reasonable <em>&ldquo;hold people accountable for updating their browsers&rdquo;</em>.
+              </div>
             </div>
           </article>
         </div>
@@ -314,6 +334,6 @@
     </div>
   </footer>
 
-  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

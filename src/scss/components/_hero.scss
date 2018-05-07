@@ -5,6 +5,8 @@
 
 
 .hero {
+	border-top: 1px solid rgba($black, 0.1);
+
 	&.is-landing {
 		.container {
 			@include desktop {

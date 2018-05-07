@@ -1,39 +1,57 @@
 /**
  * ACCORDIONS
+ *
+ * Note: Each accordion-body must have an immediate .content element
  */
 
 
 .accordions {
-
+	border-radius: $radius-large;
+	background-color: $white;
+	@include box-shadow(1);
 }
 
 .accordion {
-	border-style: solid;
-	border-color: $grey-light;
-	border-width: 0 1px 1px 1px;
-
 	&:first-child {
-		border-top-width: 1px;
 		border-radius: $radius-large $radius-large 0 0;
+
+		.accordion-head {
+			border-top: 0;
+		}
 	}
 
 	&:last-child {
 		border-radius: 0 0 $radius-large $radius-large;
 	}
 
-	&-head,
-	&-body {
-		padding: $spacing-sm;
-	}
-
 	&-head {
-		padding-top: $spacing;
-		padding-bottom: $spacing;
+		padding: $spacing-sm;
 		cursor: pointer;
+		font-size: $size-5;
+		border-top: 1px solid $grey-light;
+		transition: color $speed $easing;
+
+		.icon {
+			transition: transform $speed $easing;
+		}
+
+		&.is-open {
+			color: $primary;
+
+			.icon {
+				transform: rotate(90deg);
+			}
+		}
 	}
 
 	&-body {
-		display: none;
-		border-top: 1px solid $grey-light;
+		overflow: hidden;
+		height: 0;
+		transition: height $speed $easing;
+
+		> .content {
+			padding: $spacing;
+			padding-top: 0;
+		}
 	}
 }
