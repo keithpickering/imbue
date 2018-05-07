@@ -9591,9 +9591,12 @@ h1.title {
 
 /**
  * ACCORDIONS
+ *
+ * Note: Each accordion-body must have an immediate .content element
  */
 .accordions {
   border-radius: 6px;
+  background-color: white;
   box-shadow:  0 1px 3px rgba(0, 0, 0, 0.12),  0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .accordion:first-child {
@@ -9604,18 +9607,27 @@ h1.title {
 .accordion:last-child {
   border-radius: 0 0 6px 6px; }
 
-.accordion-head, .accordion-body {
-  padding: 1rem; }
-
 .accordion-head {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 1rem;
   cursor: pointer;
-  border-top: 1px solid #cfcfcf; }
+  font-size: 1.25rem;
+  border-top: 1px solid #cfcfcf;
+  transition: color 200ms ease-out; }
+  .accordion-head .icon {
+    transition: transform 200ms ease-out; }
+  .accordion-head.is-open {
+    color: #209cee; }
+    .accordion-head.is-open .icon {
+      transform: rotate(90deg); }
 
 .accordion-body {
-  display: none;
-  border-top: 1px solid #cfcfcf; }
+  overflow: hidden;
+  height: 0;
+  transition: height 200ms ease-out; }
+  .accordion-body > .content {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem; }
 
 /**
  * POINT

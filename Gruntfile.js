@@ -45,11 +45,11 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: ['src/js/*.js'],
+        files: ['src/**/*.js'],
         tasks: ['concat', 'uglify']
       },
       sass: {
-        files: ['src/scss/*.scss'],
+        files: ['src/**/*.scss'],
         tasks: ['sass']
       },
       styles: {
