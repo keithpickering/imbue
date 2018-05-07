@@ -4,17 +4,18 @@
 
 
 .accordions {
-
+	border-radius: $radius-large;
+	//background-color: $white;
+	@include box-shadow(1);
 }
 
 .accordion {
-	border-style: solid;
-	border-color: $grey-light;
-	border-width: 0 1px 1px 1px;
-
 	&:first-child {
-		border-top-width: 1px;
 		border-radius: $radius-large $radius-large 0 0;
+
+		.accordion-head {
+			border-top: 0;
+		}
 	}
 
 	&:last-child {
@@ -30,6 +31,7 @@
 		padding-top: $spacing;
 		padding-bottom: $spacing;
 		cursor: pointer;
+		border-top: 1px solid $grey-light;
 	}
 
 	&-body {

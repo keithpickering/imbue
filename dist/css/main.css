@@ -9546,72 +9546,76 @@ h1.title {
  * HERO
  * Extra styles extending the functionality of Bulma's hero element
  */
-@media screen and (min-width: 1088px) {
-  .hero.is-landing .container {
-    max-width: 1000px; } }
-
-.hero.is-landing .title {
-  font-size: 3rem; }
-  @media screen and (min-width: 769px), print {
-    .hero.is-landing .title {
-      font-size: 4rem; } }
-
-.hero.has-background {
-  position: relative;
-  overflow: hidden;
-  background-color: transparent; }
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  z-index: 0; }
-  .hero-background:after {
-    content: "";
+.hero {
+  border-top: 1px solid rgba(10, 10, 10, 0.1); }
+  @media screen and (min-width: 1088px) {
+    .hero.is-landing .container {
+      max-width: 1000px; } }
+  .hero.is-landing .title {
+    font-size: 3rem; }
+    @media screen and (min-width: 769px), print {
+      .hero.is-landing .title {
+        font-size: 4rem; } }
+  .hero.has-background {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent; }
+  .hero-background {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    opacity: 0.5;
-    z-index: 2; }
-    .is-primary .hero-background:after {
-      background-color: #209cee; }
-  .hero-background > img,
-  .hero-background > video {
+    right: 0;
     height: 100%;
-    width: 100%;
-    object-fit: cover; }
-
-.hero-body {
-  position: relative;
-  z-index: 1; }
-  .has-background .hero-body {
-    text-shadow: rgba(10, 10, 10, 0.5) 0 2px 15px; }
+    z-index: 0; }
+    .hero-background:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.5;
+      z-index: 2; }
+      .is-primary .hero-background:after {
+        background-color: #209cee; }
+    .hero-background > img,
+    .hero-background > video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+  .hero-body {
+    position: relative;
+    z-index: 1; }
+    .has-background .hero-body {
+      text-shadow: rgba(10, 10, 10, 0.5) 0 2px 15px; }
 
 /**
  * ACCORDIONS
  */
-.accordion {
-  border-style: solid;
-  border-color: #cfcfcf;
-  border-width: 0 1px 1px 1px; }
-  .accordion:first-child {
-    border-top-width: 1px;
-    border-radius: 6px 6px 0 0; }
-  .accordion:last-child {
-    border-radius: 0 0 6px 6px; }
-  .accordion-head, .accordion-body {
-    padding: 1rem; }
-  .accordion-head {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    cursor: pointer; }
-  .accordion-body {
-    display: none;
-    border-top: 1px solid #cfcfcf; }
+.accordions {
+  border-radius: 6px;
+  box-shadow:  0 1px 3px rgba(0, 0, 0, 0.12),  0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.accordion:first-child {
+  border-radius: 6px 6px 0 0; }
+  .accordion:first-child .accordion-head {
+    border-top: 0; }
+
+.accordion:last-child {
+  border-radius: 0 0 6px 6px; }
+
+.accordion-head, .accordion-body {
+  padding: 1rem; }
+
+.accordion-head {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+  border-top: 1px solid #cfcfcf; }
+
+.accordion-body {
+  display: none;
+  border-top: 1px solid #cfcfcf; }
 
 /**
  * POINT
