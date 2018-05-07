@@ -3,7 +3,7 @@
 const Accordion = {
 	settings: {
 		// Expand the first item by default
-		first_expanded: true,
+		first_expanded: false,
 		// Allow items to be toggled independently
 		toggle: false
 	},
@@ -23,6 +23,10 @@ const Accordion = {
 
 	init: function(el) {
 		const _this = this;
+
+		// Override default settings with classes
+		if (el.classList.contains("is-first-expanded")) _this.settings.first_expanded = true;
+		if (el.classList.contains("is-toggle")) _this.settings.toggle = true;
 
 		// Loop through the accordion's sections and set up the click behavior
 		const sections = el.getElementsByClassName("accordion");
