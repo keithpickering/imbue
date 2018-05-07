@@ -1,5 +1,3 @@
-'use strict';
-
 const Accordion = {
 	settings: {
 		// Expand the first item by default
@@ -11,7 +9,7 @@ const Accordion = {
 	openAccordion: function(toggle, content) {
 		if (content.children.length) {
 			toggle.classList.add("is-open");
-			var final_height = content.children[0].offsetHeight;
+			let final_height = Math.floor(content.children[0].offsetHeight);
 			content.style.height = final_height + "px";
 		}
 	},
@@ -32,7 +30,7 @@ const Accordion = {
 		const sections = el.getElementsByClassName("accordion");
 		const all_toggles = el.getElementsByClassName("accordion-head");
 		const all_contents = el.getElementsByClassName("accordion-body");
-		for (var i = 0; i < sections.length; i++) {
+		for (let i = 0; i < sections.length; i++) {
 			const section = sections[i];
 			const toggle = all_toggles[i];
 			const content = all_contents[i];
@@ -41,7 +39,7 @@ const Accordion = {
 			toggle.addEventListener("click", function(e) {
 				if (!_this.settings.toggle) {
 					// Hide all content areas first
-					for (var a = 0; a < all_contents.length; a++) {
+					for (let a = 0; a < all_contents.length; a++) {
 						_this.closeAccordion(all_toggles[a], all_contents[a]);
 					}
 
@@ -58,7 +56,7 @@ const Accordion = {
 			});
 
 			// Expand the first item
-			if (_this.settings.first_expanded && i === 0) {
+			if (i === 0 && _this.settings.first_expanded) {
 				_this.openAccordion(toggle, content);
 			}
 		}
@@ -68,7 +66,7 @@ const Accordion = {
 (function() {
 	// Initiate all instances on the page
 	const accordions = document.getElementsByClassName("accordions");
-	for (var i = 0; i < accordions.length; i++) {
+	for (let i = 0; i < accordions.length; i++) {
 		Accordion.init(accordions[i]);
 	}
 })();

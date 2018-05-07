@@ -9625,9 +9625,8 @@ h1.title {
   height: 0;
   transition: height 200ms ease-out; }
   .accordion-body > .content {
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1.5rem; }
+    padding: 1.5rem;
+    padding-top: 0; }
 
 /**
  * POINT

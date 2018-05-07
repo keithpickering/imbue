@@ -50,9 +50,8 @@
 		transition: height $speed $easing;
 
 		> .content {
-			padding-right: $spacing-sm;
-			padding-bottom: $spacing-sm;
-			padding-left: $spacing;
+			padding: $spacing;
+			padding-top: 0;
 		}
 	}
 }
