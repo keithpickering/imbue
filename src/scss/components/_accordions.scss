@@ -25,11 +25,15 @@
 	}
 
 	&-head {
-		padding: $spacing-sm;
+		padding: $spacing-xs;
 		cursor: pointer;
-		font-size: $size-5;
 		border-top: 1px solid $grey-light;
 		transition: color $speed $easing;
+
+		@include tablet {
+			padding: $spacing-sm;
+			font-size: $size-5;
+		}
 
 		.icon {
 			transition: transform $speed $easing;
