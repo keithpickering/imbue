@@ -9771,8 +9771,7 @@ h1.title {
   .social.is-small .social-link {
     width: 1.5rem;
     height: 1.5rem;
-    line-height: 1.5rem;
-    box-shadow: none; }
+    line-height: 1.5rem; }
 
 /**
  * PAGE FOOT
