@@ -6,6 +6,7 @@
 
 
 .accordions {
+	margin-bottom: $spacing-sm;
 	border-radius: $radius-large;
 	background-color: $white;
 	@include box-shadow(1);

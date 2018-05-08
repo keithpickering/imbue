@@ -19,11 +19,14 @@
 		}
 	}
 
-	&.is-dark .navbar-start,
-	&.is-dark .navbar-end {
-		.navbar-item {
-			color: $grey-light;
+	&.is-dark {
+		.navbar-dropdown {
+			background-color: $white-ter;
 		}
+	}
+
+	.navbar-dropdown {
+		@include box-shadow(2);
 	}
 }
 

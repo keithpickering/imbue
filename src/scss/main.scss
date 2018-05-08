@@ -28,6 +28,8 @@ $fa-font-path: "../fonts/font-awesome";
 // Import custom components - comment out any you don't need
 @import "components/container";
 @import "components/page-head";
+@import "components/page-title";
+@import "components/main";
 @import "components/hero";
 @import "components/accordions";
 @import "components/point";
