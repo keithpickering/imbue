@@ -63,14 +63,20 @@ $spacing-xs: 0.5rem;
 /**
  * GENERIC VARIABLES
  */
-$body-size: 18px;
+$body-size: 16px;
+$body-size-desk: 18px; // Optionally have different font size on desktop view
 $speed: 200ms;
+
+
+/**
+ * PAGE HEAD
+ */
+$page-head-height: 3.25rem;
 
 
 /**
  * POINT COMPONENT
  */
-
 $point-icon-size: 6rem;     // Icon size
 $point-icon-fg: $primary;   // Icon foreground color
 $point-icon-bg: $white-ter; // Icon background color

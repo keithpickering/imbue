@@ -23,6 +23,9 @@
  * GENERIC VARIABLES
  */
 /**
+ * PAGE HEAD
+ */
+/**
  * POINT COMPONENT
  */
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
@@ -266,7 +269,7 @@ th {
 
 html {
   background-color: white;
-  font-size: 18px;
+  font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -9503,6 +9506,15 @@ readers do not read off random characters that represent icons */
   overflow: hidden; }
 
 /**
+ * HTML
+ *
+ * Additional styles for main html and body elements
+*/
+html.has-navbar-fixed-top,
+body.has-navbar-fixed-top {
+  padding-top: 3.25rem; }
+
+/**
  * TITLE
  *
  * Overrides for Bulma's title and subtitle elements
@@ -9529,16 +9541,23 @@ h1.title {
  * The main navbar containing your logo and menu
  */
 .page-head {
+  height: 3.25rem;
   box-shadow:  0 1px 3px rgba(0, 0, 0, 0.12),  0 1px 2px rgba(0, 0, 0, 0.24); }
   .page-head .navbar-item {
     text-transform: uppercase;
     font-size: 0.75rem; }
     .page-head .navbar-item:hover, .page-head .navbar-item:focus {
       color: #209cee !important; }
+  @media screen and (max-width: 1087px) {
+    .page-head .navbar-menu {
+      box-shadow:  0 3px 6px rgba(0, 0, 0, 0.16),  0 3px 6px rgba(0, 0, 0, 0.23); } }
+  @media screen and (min-width: 1088px) {
+    .page-head .navbar-dropdown {
+      box-shadow:  0 3px 6px rgba(0, 0, 0, 0.16),  0 3px 6px rgba(0, 0, 0, 0.23); } }
   .page-head.is-dark .navbar-dropdown {
     background-color: whitesmoke; }
-  .page-head .navbar-dropdown {
-    box-shadow:  0 3px 6px rgba(0, 0, 0, 0.16),  0 3px 6px rgba(0, 0, 0, 0.23); }
+  .page-head.is-dark .navbar-burger:hover, .page-head.is-dark .navbar-burger:focus {
+    color: white; }
 
 .site-logo > img {
   height: 1.25rem; }
@@ -9550,15 +9569,12 @@ h1.title {
   padding-left: 0;
   padding-right: 0; }
 
-.page-head.is-fixed-top + .page-title {
-  margin-top: 3rem; }
-
 /**
- * MAIN
+ * PAGE CONTENT
  * 
  * Main content area on regular pages
  */
-.main {
+.page-content {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   padding-left: 1.5rem;
@@ -9610,6 +9626,8 @@ h1.title {
     z-index: 1; }
     .has-background .hero-body {
       text-shadow: rgba(10, 10, 10, 0.5) 0 2px 15px; }
+  .page-head.is-fixed-top + .hero.is-fullheight {
+    min-height: calc(100vh - 3.25rem); }
 
 /**
  * ACCORDIONS

@@ -1,0 +1,12 @@
+/**
+ * HTML
+ *
+ * Additional styles for main html and body elements
+*/
+
+
+html {
+	@include desktop {
+		font-size: $body-size-desk;
+	}
+}

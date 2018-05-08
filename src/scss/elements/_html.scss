@@ -1,0 +1,19 @@
+/**
+ * HTML
+ *
+ * Additional styles for main html and body elements
+*/
+
+
+html,
+body {
+	&.has-navbar-fixed-top {
+		padding-top: $page-head-height;
+	}
+}
+
+body {
+	@include desktop {
+		//font-size: 1.2rem;
+	}
+}

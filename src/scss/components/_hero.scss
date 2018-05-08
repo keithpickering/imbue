@@ -69,4 +69,10 @@
 			text-shadow: rgba($black, 0.5) 0 2px 15px;
 		}
 	}
+
+	// If we use a fixed navbar with a full-height hero
+	// immediately after, adjust the hero height
+	.page-head.is-fixed-top + &.is-fullheight {
+		min-height: calc(100vh - #{$page-head-height});
+	}
 }

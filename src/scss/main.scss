@@ -23,13 +23,14 @@ $fa-font-path: "../fonts/font-awesome";
 @import "utilities/accessibility";
 
 // Import element styles
+@import "elements/html";
 @import "elements/title";
 
 // Import custom components - comment out any you don't need
 @import "components/container";
 @import "components/page-head";
 @import "components/page-title";
-@import "components/main";
+@import "components/page-content";
 @import "components/hero";
 @import "components/accordions";
 @import "components/point";

@@ -6,7 +6,7 @@
 
 
 .page-head {
-	//background-color: rgba($white, 0.95);
+	height: $page-head-height;
 	@include box-shadow(1);
 
 	.navbar-item {
@@ -19,14 +19,30 @@
 		}
 	}
 
-	&.is-dark {
-		.navbar-dropdown {
-			background-color: $white-ter;
+	.navbar-menu {
+		// This is the breakpoint
+		@include touch {
+			@include box-shadow(2);
 		}
 	}
 
 	.navbar-dropdown {
-		@include box-shadow(2);
+		@include desktop {
+			@include box-shadow(2);
+		}
+	}
+
+	&.is-dark {
+		.navbar-dropdown {
+			background-color: $white-ter;
+		}
+
+		.navbar-burger {
+			&:hover,
+			&:focus {
+				color: $white;
+			}
+		}
 	}
 }
 

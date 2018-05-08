@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,21 +8,21 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i|Work+Sans:700" rel="stylesheet">
 </head>
 <body>
-  <nav class="page-head navbar is-fixed-top is-dark is-transparent">
+  <nav id="page-head" class="page-head navbar is-fixed-top is-dark is-transparent">
     <div class="container">
       <div class="navbar-brand">
-        <a role="button" class="site-logo navbar-item" href="/">
+        <a role="button" class="site-logo navbar-item" href="../../">
           <img src="../images/demo/imbue-logo-light.svg" alt="Imbue">
         </a>
 
-        <a role="button" class="navbar-burger" href="#" aria-label="menu" aria-expanded="false">
+        <a id="page-menu-toggle" role="button" class="navbar-burger" href="#" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div class="navbar-menu">
+      <div id="page-menu" class="navbar-menu">
         <div class="navbar-start">
           <div class="navbar-item">
             <div class="field">
@@ -44,14 +44,11 @@
               Components
             </a>
             <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item" href="">
+              <a class="navbar-item" href="../components/point.html">
                 Point
               </a>
-              <a class="navbar-item" href="">
+              <a class="navbar-item" href="../components/accordion.html">
                 Accordion
-              </a>
-              <a class="navbar-item" href="">
-                Team Members
               </a>
             </div>
           </div>
@@ -93,7 +90,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="page-content">
     <div class="container is-skinny">
       <div class="content">
         <p>A point is for showing off a product feature, or any other point you want to make. It contains a Font Awesome 5 icon, a title, and a description. Best used in a row of responsive columns.</p>

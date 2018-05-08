@@ -10,7 +10,8 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['src/js/imbue.accordion.js'],
+        src: ['src/js/imbue.page.js',
+              'src/js/imbue.accordion.js'],
         dest: 'dist/js/main.js'
       }
     },
