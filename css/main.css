@@ -9535,12 +9535,34 @@ h1.title {
     font-size: 0.75rem; }
     .page-head .navbar-item:hover, .page-head .navbar-item:focus {
       color: #209cee !important; }
-  .page-head.is-dark .navbar-start .navbar-item,
-  .page-head.is-dark .navbar-end .navbar-item {
-    color: #cfcfcf; }
+  .page-head.is-dark .navbar-dropdown {
+    background-color: whitesmoke; }
+  .page-head .navbar-dropdown {
+    box-shadow:  0 3px 6px rgba(0, 0, 0, 0.16),  0 3px 6px rgba(0, 0, 0, 0.23); }
 
 .site-logo > img {
   height: 1.25rem; }
+
+/**
+ * PAGE TITLE
+ */
+.page-title .hero-body {
+  padding-left: 0;
+  padding-right: 0; }
+
+.page-head.is-fixed-top + .page-title {
+  margin-top: 3rem; }
+
+/**
+ * MAIN
+ * 
+ * Main content area on regular pages
+ */
+.main {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
 
 /**
  * HERO
@@ -9595,6 +9617,7 @@ h1.title {
  * Note: Each accordion-body must have an immediate .content element
  */
 .accordions {
+  margin-bottom: 1rem;
   border-radius: 6px;
   background-color: white;
   box-shadow:  0 1px 3px rgba(0, 0, 0, 0.12),  0 1px 2px rgba(0, 0, 0, 0.24); }
@@ -9748,7 +9771,7 @@ h1.title {
       bottom: 0;
       left: 0;
       padding: 1.5rem;
-      background-color: rgba(74, 74, 74, 0.5);
+      background-color: rgba(32, 156, 238, 0.5);
       color: white;
       opacity: 0;
       transition: opacity 200ms; }

@@ -23,8 +23,10 @@ const Accordion = {
 		const _this = this;
 
 		// Override default settings with classes
-		if (el.classList.contains("is-first-expanded")) _this.settings.first_expanded = true;
-		if (el.classList.contains("is-toggle")) _this.settings.toggle = true;
+		let is_first_expanded = _this.settings.first_expanded;
+		if (el.classList.contains("is-first-expanded")) is_first_expanded = true;
+		let is_toggle = _this.settings.toggle;
+		if (el.classList.contains("is-toggle")) is_toggle = true;
 
 		// Loop through the accordion's sections and set up the click behavior
 		const sections = el.getElementsByClassName("accordion");
@@ -37,7 +39,7 @@ const Accordion = {
 
 			// Click behavior
 			toggle.addEventListener("click", function(e) {
-				if (!_this.settings.toggle) {
+				if (!is_toggle) {
 					// Hide all content areas first
 					for (let a = 0; a < all_contents.length; a++) {
 						_this.closeAccordion(all_toggles[a], all_contents[a]);
@@ -56,7 +58,7 @@ const Accordion = {
 			});
 
 			// Expand the first item
-			if (i === 0 && _this.settings.first_expanded) {
+			if (i === 0 && is_first_expanded) {
 				_this.openAccordion(toggle, content);
 			}
 		}
