@@ -9713,10 +9713,8 @@ h1.title {
       transition: transform 200ms ease-out; }
   .point:hover .title:after {
     transform: scaleX(1.5); }
-  .point-desc {
-    padding-left: 1.5rem; }
-    .is-horizontal .point-desc {
-      padding-left: 0; }
+  .is-horizontal .point-desc {
+    padding-left: 0; }
 
 /**
  * TEAM
