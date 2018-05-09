@@ -1,6 +1,5 @@
 /*global module:false*/
 module.exports = function(grunt) {
-
   // Project configuration.
   grunt.initConfig({
     // Metadata.
@@ -56,6 +55,22 @@ module.exports = function(grunt) {
       styles: {
         files: ['dist/css/*.css', '!dist/css/*.min.css'],
         tasks: ['cssmin']
+      },
+      html: {
+        files: ['src/pages/**/*.html', 'src/includes/**/*.html'],
+        tasks: ['includes']
+      }
+    },
+    includes: {
+      files: {
+        src: ['**/*.html'],
+        dest: 'dist/',
+        cwd: 'src/pages',
+        options: {
+          flatten: true,
+          includePath: 'src/includes',
+          wrapper: 'src/includes/wrapper.html'
+        }
       }
     }
   });
@@ -66,8 +81,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-includes');
 
   // Default task.
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin']);
-
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'includes']);
+  grunt.registerTask('styles', ['sass', 'cssmin']);
+  grunt.registerTask('scripts', ['concat', 'uglify']);
 };

@@ -10,8 +10,9 @@
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-qunit": "~0.5.2",
-    "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony",
+    "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-includes": "^1.1.0",
     "grunt-sass": "^2.1.0"
   },
   "dependencies": {

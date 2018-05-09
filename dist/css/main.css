@@ -791,10 +791,10 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   background-color: #7a7a7a !important; }
 
 .has-text-grey-light {
-  color: #cfcfcf !important; }
+  color: #dbdbdb !important; }
 
 .has-background-grey-light {
-  background-color: #cfcfcf !important; }
+  background-color: #dbdbdb !important; }
 
 .has-text-grey-lighter {
   color: #dbdbdb !important; }
@@ -1153,7 +1153,7 @@ a.box:active {
     margin-left: calc(-0.375em - 1px);
     margin-right: calc(-0.375em - 1px); }
   .button:hover, .button.is-hovered {
-    border-color: #cfcfcf;
+    border-color: #dbdbdb;
     color: #363636; }
   .button:focus, .button.is-focused {
     border-color: #3273dc;
@@ -2030,7 +2030,7 @@ a.box:active {
   .input:hover, .input.is-hovered,
   .textarea:hover,
   .textarea.is-hovered {
-    border-color: #cfcfcf; }
+    border-color: #dbdbdb; }
   .input:focus, .input.is-focused, .input:active, .input.is-active,
   .textarea:focus,
   .textarea.is-focused,
@@ -2246,7 +2246,7 @@ a.box:active {
     .select select:-ms-input-placeholder {
       color: rgba(54, 54, 54, 0.3); }
     .select select:hover, .select select.is-hovered {
-      border-color: #cfcfcf; }
+      border-color: #dbdbdb; }
     .select select:focus, .select select.is-focused, .select select:active, .select select.is-active {
       border-color: #3273dc;
       box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25); }
@@ -3492,7 +3492,7 @@ a.tag:hover {
       cursor: default;
       pointer-events: none; }
     .breadcrumb li + li::before {
-      color: #cfcfcf;
+      color: #dbdbdb;
       content: "\0002f"; }
   .breadcrumb ul,
   .breadcrumb ol {
@@ -4756,7 +4756,7 @@ a.navbar-item,
   .pagination-previous:hover,
   .pagination-next:hover,
   .pagination-link:hover {
-    border-color: #cfcfcf;
+    border-color: #dbdbdb;
     color: #363636; }
   .pagination-previous:focus,
   .pagination-next:focus,
@@ -4787,7 +4787,7 @@ a.navbar-item,
   color: #fff; }
 
 .pagination-ellipsis {
-  color: #cfcfcf;
+  color: #dbdbdb;
   pointer-events: none; }
 
 .pagination-list {
@@ -4991,7 +4991,7 @@ label.panel-block {
     position: relative; }
     .tabs.is-toggle a:hover {
       background-color: whitesmoke;
-      border-color: #cfcfcf;
+      border-color: #dbdbdb;
       z-index: 2; }
   .tabs.is-toggle li + li {
     margin-left: -1px; }
@@ -9581,53 +9581,77 @@ h1.title {
   padding-right: 1.5rem; }
 
 /**
+ * ISLAND
+ *
+ * Simply add a certain amount of padding to an element
+ */
+.island {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem; }
+  .island.is-small {
+    padding: 1rem; }
+  .island.is-large {
+    padding: 2rem; }
+  .island.is-extra-large {
+    padding: 2.5rem; }
+  .island.is-bordered {
+    border: 1px solid #dbdbdb;
+    border-radius: 6px; }
+
+/**
  * HERO
  * Extra styles extending the functionality of Bulma's hero element
  */
-.hero {
+.hero:not(:first-of-type) {
   border-top: 1px solid rgba(10, 10, 10, 0.1); }
-  @media screen and (min-width: 1088px) {
-    .hero.is-landing .container {
-      max-width: 1000px; } }
-  .hero.is-landing .title {
-    font-size: 3rem; }
-    @media screen and (min-width: 769px), print {
-      .hero.is-landing .title {
-        font-size: 4rem; } }
-  .hero.has-background {
-    position: relative;
-    overflow: hidden;
-    background-color: transparent; }
-  .hero-background {
+
+@media screen and (min-width: 1088px) {
+  .hero.is-landing .container {
+    max-width: 1000px; } }
+
+.hero.is-landing .title {
+  font-size: 3rem; }
+  @media screen and (min-width: 769px), print {
+    .hero.is-landing .title {
+      font-size: 4rem; } }
+
+.hero.has-background {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent; }
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 0; }
+  .hero-background:after {
+    content: "";
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 2; }
+    .is-primary .hero-background:after {
+      background-color: #209cee; }
+  .hero-background > img,
+  .hero-background > video {
     height: 100%;
-    z-index: 0; }
-    .hero-background:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0.5;
-      z-index: 2; }
-      .is-primary .hero-background:after {
-        background-color: #209cee; }
-    .hero-background > img,
-    .hero-background > video {
-      height: 100%;
-      width: 100%;
-      object-fit: cover; }
-  .hero-body {
-    position: relative;
-    z-index: 1; }
-    .has-background .hero-body {
-      text-shadow: rgba(10, 10, 10, 0.5) 0 2px 15px; }
-  .page-head.is-fixed-top + .hero.is-fullheight {
-    min-height: calc(100vh - 3.25rem); }
+    width: 100%;
+    object-fit: cover; }
+
+.hero-body {
+  position: relative;
+  z-index: 1; }
+  .has-background .hero-body {
+    text-shadow: rgba(10, 10, 10, 0.5) 0 2px 15px; }
+
+.page-head.is-fixed-top + .hero.is-fullheight {
+  min-height: calc(100vh - 3.25rem); }
 
 /**
  * ACCORDIONS
@@ -9651,7 +9675,7 @@ h1.title {
 .accordion-head {
   padding: 0.5rem;
   cursor: pointer;
-  border-top: 1px solid #cfcfcf;
+  border-top: 1px solid #dbdbdb;
   transition: color 200ms ease-out; }
   @media screen and (min-width: 769px), print {
     .accordion-head {
@@ -9727,7 +9751,7 @@ h1.title {
       width: 25%;
       margin-left: -12.5%;
       height: 1px;
-      background-color: #e8e8e8;
+      background-color: whitesmoke;
       transition: transform 200ms ease-out; }
   .point:hover .title:after {
     transform: scaleX(1.5); }
@@ -9832,4 +9856,4 @@ h1.title {
  * The main footer on each page
  */
 .page-foot {
-  color: #cfcfcf; }
+  color: #dbdbdb; }

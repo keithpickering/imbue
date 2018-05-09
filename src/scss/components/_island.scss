@@ -1,0 +1,28 @@
+/**
+ * ISLAND
+ *
+ * Simply add a certain amount of padding to an element
+ */
+
+
+.island {
+	margin-bottom: $spacing;
+	padding: $spacing;
+
+	&.is-small {
+		padding: $spacing-sm;
+	}
+
+	&.is-large {
+		padding: $spacing-lg;
+	}
+
+	&.is-extra-large {
+		padding: $spacing-xl;
+	}
+
+	&.is-bordered {
+		border: 1px solid $grey-light;
+		border-radius: $radius-large;
+	}
+}

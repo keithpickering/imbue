@@ -5,7 +5,9 @@
 
 
 .hero {
-	border-top: 1px solid rgba($black, 0.1);
+	&:not(:first-of-type) {
+		border-top: 1px solid rgba($black, 0.1);
+	}
 
 	&.is-landing {
 		.container {
