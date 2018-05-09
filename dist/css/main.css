@@ -9548,6 +9548,8 @@ h1.title {
     font-size: 0.75rem; }
     .page-head .navbar-item:hover, .page-head .navbar-item:focus {
       color: #209cee !important; }
+  .page-head .navbar-link:after {
+    margin-top: -0.475em; }
   @media screen and (max-width: 1087px) {
     .page-head .navbar-menu {
       box-shadow:  0 3px 6px rgba(0, 0, 0, 0.16),  0 3px 6px rgba(0, 0, 0, 0.23); } }

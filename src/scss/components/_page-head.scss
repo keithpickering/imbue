@@ -19,6 +19,12 @@
 		}
 	}
 
+	.navbar-link {
+		&:after {
+			margin-top: -0.475em;
+		}
+	}
+
 	.navbar-menu {
 		// This is the breakpoint
 		@include touch {
