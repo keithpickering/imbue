@@ -10,7 +10,8 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['src/js/imbue.page.js',
-              'src/js/imbue.accordion.js'],
+              'src/js/imbue.accordion.js',
+              'src/js/imbue.counters.js'],
         dest: 'dist/js/main.js'
       }
     },

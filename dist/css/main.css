@@ -9699,6 +9699,31 @@ h1.title {
     padding-top: 0; }
 
 /**
+ * COUNTERS
+ */
+@media screen and (min-width: 769px), print {
+  .counters .column {
+    padding-left: 0; } }
+
+.counter {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #dbdbdb;
+  text-align: center; }
+  @media screen and (min-width: 769px), print {
+    .counter {
+      border-bottom: 0;
+      border-right: 1px solid #dbdbdb; } }
+  .column:last-of-type .counter {
+    border-bottom: 0;
+    border-right: 0; }
+  .counter-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700; }
+  .counter-name {
+    display: block; }
+
+/**
  * POINT
  *
  * For when you need to make a point. Contains an icon, a title, and text content.
@@ -9753,7 +9778,7 @@ h1.title {
       width: 25%;
       margin-left: -12.5%;
       height: 1px;
-      background-color: whitesmoke;
+      background-color: #dbdbdb;
       transition: transform 200ms ease-out; }
   .point:hover .title:after {
     transform: scaleX(1.5); }
@@ -9850,7 +9875,8 @@ h1.title {
   .social.is-small .social-link {
     width: 1.5rem;
     height: 1.5rem;
-    line-height: 1.5rem; }
+    line-height: 1.5rem;
+    font-size: 0.75rem; }
 
 /**
  * PAGE FOOT

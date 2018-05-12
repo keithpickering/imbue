@@ -1,0 +1,38 @@
+/**
+ * COUNTERS
+ */
+
+
+.counters {
+	@include tablet {
+		.column {
+			padding-left: 0;
+		}
+	}
+}
+
+.counter {
+	padding-bottom: $spacing-xl;
+	border-bottom: 1px solid $grey-light;
+	text-align: center;
+
+	@include tablet {
+		border-bottom: 0;
+		border-right: 1px solid $grey-light;
+	}
+
+	.column:last-of-type & {
+		border-bottom: 0;
+		border-right: 0;
+	}
+
+	&-number {
+		display: block;
+		font-size: $size-1;
+		font-weight: 700;
+	}
+
+	&-name {
+		display: block;
+	}
+}
