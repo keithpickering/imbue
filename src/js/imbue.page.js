@@ -2,6 +2,16 @@ const Page = {
 	settings: {
 	},
 
+	el_visible: function(el) {
+	    var bounding = el.getBoundingClientRect();
+	    return (
+	        bounding.top >= 0 &&
+	        bounding.left >= 0 &&
+	        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+	        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+	    );
+	},
+
 	init: function(el) {
 		const _this = this;
 
@@ -12,7 +22,6 @@ const Page = {
 
 		menu_toggle.addEventListener("click", function(e) {
 			e.preventDefault();
-
 			menu.classList.toggle("is-active");
 		});
 	}
