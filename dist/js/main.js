@@ -106,6 +106,7 @@ const Accordion = {
 })();
 const Counter = {
 	settings: {
+		// Time it should take to count to the final number
 		speed: 1000
 	},
 
